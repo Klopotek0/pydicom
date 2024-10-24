@@ -819,8 +819,8 @@ def write_dataset(
     # data_elements must be written in tag order
     for tag in sorted(dataset.keys()):
         # do not write retired Group Length (see PS3.5, 7.2)
-        if tag.element == 0 and tag.group > 6:
-            continue
+    #    if tag.element == 0 and tag.group > 6:
+      #      continue
 
         with tag_in_exception(tag):
             write_data_element(fp, get_item(tag), dataset_encoding)
